@@ -1,5 +1,7 @@
 # Example app for CI Hexlet course
 
+[![setup](https://github.com/42octopus/ci-app/actions/workflows/setup.yml/badge.svg?branch=main)](https://github.com/42octopus/ci-app/actions/workflows/setup.yml)
+
 Starting boilerplate of [Strapi](https://strapi.io/) application
 
 ## System requirements
