@@ -1,7 +1,8 @@
 name: setup
 
 on:
-  push:
+  - push
+  - pull_request
 
 jobs:
   build:
@@ -10,16 +11,17 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v6.0.2
-      - name: Print Hello from Hexlet
-        uses: hexlet-components/hello-from-hexlet-action@release
       - name: user node.js 18
         uses: actions/setup-node@v6.2.0
         with:
-          node-version: '18'
+          node-version: '18.x'
+          cache: 'npm'
       - name: install and build
         run: make setup
       - name: run tests
         run: make test
       - name: run linter
         run: make lint
+      - name: Print Hello from Hexlet
+        uses: hexlet-components/hello-from-hexlet-action@release  
 
